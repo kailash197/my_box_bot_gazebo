@@ -21,6 +21,8 @@ install(
     launch
     worlds
     models
+    urdf
+    rviz
   DESTINATION
     share/${PROJECT_NAME}/
 )
