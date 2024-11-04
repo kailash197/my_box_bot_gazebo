@@ -10,6 +10,14 @@ find_package(ament_cmake REQUIRED)
 find_package(rclpy REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(my_box_bot_description REQUIRED)
+find_package(urdf REQUIRED)
+find_package(xacro REQUIRED)
+# For control
+find_package(ros2_control REQUIRED)
+find_package(gazebo_ros2_control REQUIRED)
+find_package(joint_state_broadcaster REQUIRED)
+find_package(joint_trajectory_controller REQUIRED)
+find_package(velocity_controllers REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -26,6 +34,11 @@ install(
     config
   DESTINATION
     share/${PROJECT_NAME}/
+)
+
+install(PROGRAMS
+  scripts/move_laser.py
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
