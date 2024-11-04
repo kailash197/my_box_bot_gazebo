@@ -1,5 +1,7 @@
 <?xml version='1.0' ?>
 <launch>
+  <!-- Launch Gazebo with empty world -->
+  <include file="$(find-pkg-share my_box_bot_gazebo)/launch/start_world.launch.py"/>
   <!-- Publish URDF file in robot_description topic -->
   <include file="$(find-pkg-share my_box_bot_gazebo)/launch/urdf_visualize_control.launch.py"/>
   <!-- Read robot_description and spawn in gazebo running sim -->
