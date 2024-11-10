@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_box_bot">
+
+<xacro:property name="body_width" value="0.1"/>
+<xacro:property name="body_lenght" value="0.1"/>
+<xacro:property name="body_height" value="0.1"/>
     
 <link name="base_link">
   </link>
@@ -13,13 +17,13 @@
   <link name="chassis">
     <visual>
       <geometry>
-        <box size="0.1 0.1 0.1"/>
+        <box size="${body_width} ${body_lenght} ${body_height}"/>
       </geometry>
     </visual>
 
     <collision>
       <geometry>
-        <box size="0.1 0.1 0.1"/>
+        <box size="${body_width} ${body_lenght} ${body_height}"/>
       </geometry>
     </collision>
 
